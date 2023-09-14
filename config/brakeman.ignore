@@ -14,7 +14,7 @@
         {
           "type": "template",
           "name": "admin/disputes/appeals/index",
-          "line": 20,
+          "line": 17,
           "file": "app/views/admin/disputes/appeals/index.html.haml",
           "rendered": {
             "name": "admin/disputes/appeals/_appeal",
@@ -58,6 +58,29 @@
       "note": ""
     },
     {
+      "warning_type": "Redirect",
+      "warning_code": 18,
+      "fingerprint": "8b543fdb2adb90f9c9e26ab6a67065ed577be23bc7fa3ed8158bb022394d0382",
+      "check_name": "Redirect",
+      "message": "Possible unprotected redirect",
+      "file": "app/controllers/redirects_controller.rb",
+      "line": 16,
+      "link": "https://brakemanscanner.org/docs/warning_types/redirect/",
+      "code": "redirect_to(params.require(:url), :allow_other_host => true)",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "RedirectsController",
+        "method": "show"
+      },
+      "user_input": "params.require(:url)",
+      "confidence": "Weak",
+      "cwe_id": [
+        601
+      ],
+      "note": ""
+    },
+    {
       "warning_type": "Cross-Site Scripting",
       "warning_code": 4,
       "fingerprint": "cd5cfd7f40037fbfa753e494d7129df16e358bfc43ef0da3febafbf4ee1ed3ac",
@@ -71,7 +94,7 @@
         {
           "type": "template",
           "name": "admin/trends/links/index",
-          "line": 49,
+          "line": 46,
           "file": "app/views/admin/trends/links/index.html.haml",
           "rendered": {
             "name": "admin/trends/links/_preview_card",
@@ -91,6 +114,6 @@
       "note": ""
     }
   ],
-  "updated": "2023-07-12 11:20:51 -0400",
-  "brakeman_version": "6.0.0"
+  "updated": "2023-09-14 09:50:03 +0200",
+  "brakeman_version": "6.0.1"
 }
